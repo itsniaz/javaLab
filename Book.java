@@ -8,6 +8,50 @@ public class Book
 		private String bookType;
 		private int bookCopy;
 
+	
+	public void setBookName(String bookName)
+	{
+		 this.bookName = bookName;
+	}
+	public void setBookAuthor(String bookAuthor)
+	{
+		this.bookAuthor = bookAuthor;
+	}
+	
+	public void setBookId(String bookId)
+	{
+		this.bookId = bookId;
+	}
+	public void setBookType(String bookType)
+	{
+		this.bookType = bookType;
+	}
+	public void setBookCopy(int bookCopy)
+	{
+		this.bookCopy = bookCopy;
+	}
+	
+	public String getBookName()
+	{
+		 return bookName;
+	}
+	public void getBookAuthor()
+	{
+		return bookAuthor;
+	}
+	
+	public String getBookId()
+	{
+		return bookId;
+	}
+	public String getBookType()
+	{
+		return bookType;
+	}
+	public void getBookCopy()
+	{
+		return bookCopy;
+	}
 
 	public Book(String bookName,String bookAuthor,String bookId,String bookType)
 	{
@@ -16,11 +60,11 @@ public class Book
 		this.bookId = bookId;
 		this.bookType = bookType;
         this.bookCopy = bookCopy;
-        bookObj += 1;
+        bookObj ++;
 	}
     public  Book()
     {
-        bookObj +=  1;
+        bookObj ++;
     }
     public void showBookInfo()
     {
@@ -40,7 +84,7 @@ public class Book
     }
     static void showTotalBookInfo()
     {
-    
+		System.out.println("Number of Total Books : " +bookObj);
     }
    public static void main(String[] args) 
    {
