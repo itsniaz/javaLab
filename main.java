@@ -9,12 +9,13 @@ public class main
 		
 		String name = inp.nextLine();
 		
-		System.out.println(name);
+	
 		
-		track =  name.indexOf(' ');
+		int track =  name.indexOf(' ');
 		
 		track++;
 		
-		System.out.println(name.substring(track,name.length).toUpperCase());
+		
+		System.out.println(name.substring(0,track)+name.substring(track,name.length()).toUpperCase());
 	}
 }
