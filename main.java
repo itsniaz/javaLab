@@ -9,7 +9,7 @@ public class main
 		
 		String name = inp.nextLine();
 		
-	
+		name = name.trim();
 		
 		int track =  name.indexOf(' ');
 		
