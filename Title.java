@@ -38,7 +38,7 @@ public class Title
 			}
 			else
 			{
-				System.out.println("Mr. "+name);
+				System.out.println("Mr/Mrs "+name);
 			}
 		}
 		
