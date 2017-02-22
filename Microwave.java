@@ -30,8 +30,6 @@ public class Microwave
         StringBuffer bfrtime = new StringBuffer(time);
         m1.setTime(bfrtime);
         System.out.println("Your Time -> "+m1.getMyTime());
-        
-
     }
 
 }
