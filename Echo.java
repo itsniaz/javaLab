@@ -14,8 +14,7 @@ public class Echo
 	public void addEcho()
 	{
 		name = name.trim();
-		int track =  name.indexOf(' ');
-		track++;
+		int track =  name.indexOf(' ')+1;
 		name = name.substring(0,track)+name.substring(track,name.length()).toUpperCase();
 	}
     public String getName()
