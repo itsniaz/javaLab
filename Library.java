@@ -25,21 +25,19 @@ public class Library
 			System.out.println("Library Address : "+libAddress);
 			System.out.println("Total Number of Books : "+totalBook);
 			System.out.println("\nBooks Available in the Library : ");
-			for(int i = 0;i<listOfBook.length();i++)
+			for(int i = 0;	i<listOfBook.length;	i++)
 			{
-				if(listOfBook[i].getbookName.equals("null"))
-				{
-					continue;
-				}
-				else
-				{
-					listOfBook[i].showBookinfo();
-				}
+				if(listOfBook[i].getBookName()==null)continue;
+				listOfBook[i].showBookInfo();
 			}
 		}
 		public static void main(String[] args)
 		{
 			Book b1[] = new Book[5];
+			for(int i = 0; i < b1.length ; i++)
+			{
+   				 b1[i] = new Book();
+			}
 			Library l1 = new Library("AIUB Library","Banani",b1,5);
 			l1.showLibInfo();
 		}

@@ -1,4 +1,4 @@
-public class Book
+ class Book
 {
    
         static int bookObj = 0;
@@ -35,7 +35,7 @@ public class Book
 	{
 		 return bookName;
 	}
-	public void getBookAuthor()
+	public String getBookAuthor()
 	{
 		return bookAuthor;
 	}
@@ -48,7 +48,7 @@ public class Book
 	{
 		return bookType;
 	}
-	public void getBookCopy()
+	public int getBookCopy()
 	{
 		return bookCopy;
 	}
@@ -86,13 +86,5 @@ public class Book
     {
 		System.out.println("Number of Total Books : " +bookObj);
     }
-   public static void main(String[] args) 
-   {
-      Book b1 = new Book();
-      Book b2 = new Book();
-      Book b3 = new Book();
-      System.out.println("Number of Books : "+bookObj); 
-   
-   }
     
 }
