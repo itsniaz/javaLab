@@ -64,7 +64,10 @@
 	}
     public  Book()
     {
-        bookObj ++;
+        bookName = "No Name";
+		bookAuthor = "No Name";
+		bookCopy = 0;
+		bookId = "";
     }
     public void showBookInfo()
     {
