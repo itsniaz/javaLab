@@ -9,9 +9,9 @@ public class Library
 		
 		public Library()
 		{
-			
+			totalBook = 0;
 		}
-		public Library(String libName,String libAddress,Book[] listOfBook,int totalBook)
+		public Library(String libName,String libAddress,Book[] listOfBook)
 		{
 			this.libName = libName;
 			this.libAddress = libAddress;
@@ -19,6 +19,7 @@ public class Library
 			this.totalBook = totalBook;
 			this.listOfBook = listOfBook;
 		}
+
 		public void showLibInfo()
 		{
 			System.out.println("Library Name : "+libName);
@@ -31,15 +32,35 @@ public class Library
 				listOfBook[i].showBookInfo();
 			}
 		}
+		public void addNewBook(Book book)
+		{
+			 listOfBook[totalBook] = book;
+			 totalBook += book.getBookCopy();
+		}
+
 		public static void main(String[] args)
 		{
-			Book b1[] = new Book[5];
-			for(int i = 0; i < b1.length-1 ; i++)
+			Book b1[] = new Book[10];
+			for(int i = 0; i < b1.length ; i++)
 			{
    				 b1[i] = new Book();
 			}
-			b1[4] = new Book("Misir Ali","Humayun Ahmed","ABC 123","Thriller");
-			Library l1 = new Library("AIUB Library","Banani",b1,5);
+
+			b1[0].setBookName("Bela Periye");
+			b1[0].setBookAuthor("Niaz Ahmed");
+			b1[0].setBookId("ISBN - 2114");
+			b1[0].setBookType("Travel");
+			b1[0].setBookCopy(3);
+
+
+			Library l1 = new Library("AIUB Library","Banani",b1);
+
+			System.out.println("\nBefore Adding Book");
+			l1.showLibInfo();
+
+			System.out.println("\nAfter Adding Book");
+	
+			l1.addNewBook(b1[0]);
 			l1.showLibInfo();
 		}
 
