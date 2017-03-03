@@ -1,5 +1,3 @@
-
-//Incomplete 
 public class Library
 {
 		private String libName;
