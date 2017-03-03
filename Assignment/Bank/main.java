@@ -1,5 +1,5 @@
 public class main{
-	public static void main(String a[]){
+	public static void main(String args[]){
 		Account sen=new Account("SA-RA-1","Rahim",1500);
 		Account rec=new Account("SA-KA-2","Karim",1200);
 		
