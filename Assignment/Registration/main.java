@@ -8,10 +8,10 @@ public class main
 
          Course c1 = new Course(0000145,"Advanced CN");
          Course c2 = new Course(0000146,"Compiler Design");
-         Course c3 = new Course(0000145,"CAD");
-         Course c4 = new Course(0000145,"Mircroprocessor");
-         Course c5 = new Course(0000145,"OOP 2");
-         Course c6 = new Course(0000145,"Web Tech");
+         Course c3 = new Course(0000147,"CAD");
+         Course c4 = new Course(0000148,"Mircroprocessor");
+         Course c5 = new Course(0000149,"OOP 2");
+         Course c6 = new Course(0000151,"Web Tech");
 
          Enroll e = new Enroll();
 
