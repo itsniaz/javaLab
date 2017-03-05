@@ -6,12 +6,12 @@ public class main
          Student st2 =  new Student("Mamun Ashraf","15-28236-1","CSE",3.71);
          Student st3 = new Student("Nawshin Nusrat","15-28519-1","CSE",3.92);
 
-         Course c1 = new Course(123,"Advanced CN");
-         Course c2 = new Course(456,"Compiler Design");
-         Course c3 = new Course(789,"CAD");
-         Course c4 = new Course(265,"Mircroprocessor");
-         Course c5 = new Course(545,"OOP 2");
-         Course c6 = new Course(455,"Web Tech");
+         Course c1 = new Course(0000145,"Advanced CN");
+         Course c2 = new Course(0000146,"Compiler Design");
+         Course c3 = new Course(0000147,"CAD");
+         Course c4 = new Course(0000148,"Mircroprocessor");
+         Course c5 = new Course(0000149,"OOP 2");
+         Course c6 = new Course(0000151,"Web Tech");
 
          Enroll e = new Enroll();
 
