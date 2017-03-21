@@ -1,8 +1,16 @@
-public abstract class Account
+public abstract class Account implements AccountInterface
 {
     private String acID;
     private double balance;
     private double limit;
+
+    public double getLimit() {
+        return this.limit;
+    }
+
+    public void setLimit(double limit) {
+        this.limit = limit;
+    }
     private String acType;
 
     public String getAcType() {
@@ -34,13 +42,14 @@ public abstract class Account
     	this.acID = acID;
     	this.balance = balance;
     }
-    
-    public abstract void calcLimit();
+
+    @Override
+    public boolean deposit(double amount)
+    {
+         balance+=amount;
+         return true;
+    }
 
     public abstract boolean withdraw(double amount);
-
-    public boolean deposit(int amount)
-    {
-    	return balance+=amount;
-    }
+    public abstract void calcLimit();
 }

@@ -1,5 +1,6 @@
 public interface AccountInterface
 {
 
-   public boolean withdraw(double amount);
+   public boolean deposit(double amount);
+
 }

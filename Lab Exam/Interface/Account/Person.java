@@ -2,6 +2,7 @@ public  class Person
 {
  	private String name;
  	private Account account;
+ 	private Account tempAC;
 	
 
  	public String getName() {
@@ -29,8 +30,22 @@ public  class Person
 
  	public boolean changeAC(Account account)
  	{
- 		this.account = new 
+ 		tempAC = this.account;
+ 		this.account = account;
+ 	 	this.account.setBalance(tempAC.getBalance());
+ 	 	this.account.setAcID(tempAC.getAcID());
+ 	 	return true;
+
  	}
 
+ 	public void showACInfo()
+
+ 	{
+ 		System.out.println("Account ID "+account.getAcID());
+ 		System.out.println("Account Balance : "+account.getBalance());
+ 		System.out.println("Account Holder : "+getName());
+ 		//System.out.println("Account Type : "+getAcType());
+ 		
+ 	}
 
 }

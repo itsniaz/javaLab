@@ -1,16 +1,21 @@
-public class CurrentAC extends Account
+public class OverdraftAC extends Account 
 {
-	public CurrentAC(String acID,double balance)
+
+	private double limitO;
+
+	public OverdraftAC(String acID,double balance,double limitO)
 	{
 		super(acID,balance);
-		setAcType("Current");
+		setAcType("OVerdraft");
+		this.limitO = limitO;
 
 	}
+
 
 	@Override
 	public void calcLimit()
 	{
-		setLimit(getBalance());
+		setLimit(balance+limitO);
 	}
 
 	@Override
@@ -24,10 +29,8 @@ public class CurrentAC extends Account
 		}
 		else
 		{
-			setBalance(getBalance()-amount);
+			balance -= amount;
 			return true;
 		}
 	}
-
-	
 }

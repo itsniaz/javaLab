@@ -1,16 +1,16 @@
-public class CurrentAC extends Account
+public class SavingAC extends Account 
 {
-	public CurrentAC(String acID,double balance)
+		public SavingAC(String acID,double balance)
 	{
 		super(acID,balance);
-		setAcType("Current");
-
+		setAcType("Saving");
 	}
+
 
 	@Override
 	public void calcLimit()
 	{
-		setLimit(getBalance());
+		setLimit(balance*0.8);
 	}
 
 	@Override
@@ -18,16 +18,15 @@ public class CurrentAC extends Account
 	{
 		calcLimit();
 
+		
 		if(amount>getLimit())
 		{	
 			return  false;
 		}
 		else
 		{
-			setBalance(getBalance()-amount);
+			balance -= amount;
 			return true;
 		}
 	}
-
-	
 }
