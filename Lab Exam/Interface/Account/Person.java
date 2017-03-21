@@ -32,19 +32,21 @@ public  class Person
  	{
  		tempAC = this.account;
  		this.account = account;
- 	 	this.account.setBalance(tempAC.getBalance());
- 	 	this.account.setAcID(tempAC.getAcID());
+ 	 	account.setBalance(tempAC.getBalance());
+ 	 	account.setAcID(tempAC.getAcID());
  	 	return true;
 
  	}
 
+ 	
+
  	public void showACInfo()
 
  	{
- 		System.out.println("Account ID "+account.getAcID());
+ 		System.out.println("Account ID : "+account.getAcID());
  		System.out.println("Account Balance : "+account.getBalance());
  		System.out.println("Account Holder : "+getName());
- 		//System.out.println("Account Type : "+getAcType());
+ 		System.out.println("Account Type : "+account.getAcType());
  		
  	}
 

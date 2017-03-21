@@ -3,7 +3,17 @@ public abstract class Account implements AccountInterface
     private String acID;
     private double balance;
     private double limit;
+    private String acType;
 
+    public void setAcType(String acType)
+    {
+        this.acType = acType;
+    }
+    
+    public String getAcType()
+    {
+        return this.acType;
+    }
     public double getLimit() {
         return this.limit;
     }
@@ -11,14 +21,10 @@ public abstract class Account implements AccountInterface
     public void setLimit(double limit) {
         this.limit = limit;
     }
-    private String acType;
-
-    public String getAcType() {
-        return this.acType;
-    }
-
-    public void setAcType(String acType) {
-        this.acType = acType;
+    
+    public Account()
+    {
+        
     }
 
     public String getAcID() {

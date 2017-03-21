@@ -11,6 +11,10 @@ public class OverdraftAC extends Account
 
 	}
 
+	public OverdraftAC()
+	{
+		
+	}
 
 	@Override
 	public void calcLimit()
@@ -29,7 +33,7 @@ public class OverdraftAC extends Account
 		}
 		else
 		{
-			balance -= amount;
+			setBalance(getBalance()=amount)
 			return true;
 		}
 	}

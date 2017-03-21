@@ -6,11 +6,16 @@ public class SavingAC extends Account
 		setAcType("Saving");
 	}
 
+	public SavingAC()
+	{
+		setAcType("Saving");
+	}
+
 
 	@Override
 	public void calcLimit()
 	{
-		setLimit(balance*0.8);
+		setLimit(getBalance()*0.8);
 	}
 
 	@Override
@@ -25,7 +30,7 @@ public class SavingAC extends Account
 		}
 		else
 		{
-			balance -= amount;
+			setBalance(getBalance()-amount);
 			return true;
 		}
 	}

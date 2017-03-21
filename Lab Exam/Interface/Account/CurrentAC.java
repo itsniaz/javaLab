@@ -7,6 +7,10 @@ public class CurrentAC extends Account
 
 	}
 
+	public CurrentAC()
+	{
+		setAcType("Current");
+	}
 	@Override
 	public void calcLimit()
 	{
