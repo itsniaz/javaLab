@@ -1,4 +1,6 @@
 
+
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -27,15 +29,12 @@ class Calculator extends JFrame
 
         super("Calculator");
 		
-		try
-		{
-			
-			 UIManager.setLookAndFeel("SmartLookAndFeel");
-		} catch (Exception e)
-		
-		{
-			e.printStackTrace();
-		}
+		try 
+    { 
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); 
+    } 
+    catch(Exception e){ 
+    }
         JOptionPane.showMessageDialog(null, "Ai Calulator ti behbohar kore \n Porikkhay Golla paile Niaz Ahmed Dayi noy", "Sotorko Barta", JOptionPane.ERROR_MESSAGE);
         //Layout of JFrame
         
@@ -111,7 +110,7 @@ class Calculator extends JFrame
 	   field.setEditable(false);
         panel5.add(field);
         panel5.add(panel4);
-        
+       // panel5.add(new JLabel());
 
 
         for(int i = 0 ; i<btn.length;i++)
@@ -119,7 +118,8 @@ class Calculator extends JFrame
                 btn[i].addActionListener(new l());
            }
 
-        add(panel5,BorderLayout.SOUTH);
+        add(panel5,BorderLayout.CENTER);
+		//add(new JLabel("      "),BorderLayout.SOUTH);
         
 
         //add(panel1,BorderLayout.SOUTH);
@@ -129,7 +129,7 @@ class Calculator extends JFrame
 	  //Necessary Initializations
 	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setSize(265,330);
+        setSize(275,400);
 		setResizable(false);
 		setVisible(true);
     }
