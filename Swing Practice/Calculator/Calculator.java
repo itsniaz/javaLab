@@ -36,7 +36,9 @@ class Calculator extends JFrame
     catch(Exception e){ 
     }
         JOptionPane.showMessageDialog(null, "Ai Calulator ti behbohar kore \n Porikkhay Golla paile Niaz Ahmed Dayi noy", "Sotorko Barta", JOptionPane.ERROR_MESSAGE);
-        //Layout of JFrame
+    
+
+	 //Layout of JFrame
         
         setLayout(new BorderLayout());
 
