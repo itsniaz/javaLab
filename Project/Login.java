@@ -1,11 +1,14 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
-import javax.swing.*;
-
 public class Login extends JFrame
 {
+	
+	public static void main(String[] args)
+	{
+		new Login();
+	}
 
      JTextField username = new JTextField(15);
      JPasswordField password = new JPasswordField(15); 
@@ -15,15 +18,17 @@ public class Login extends JFrame
     {
         super("Login");
         setLayout(new BorderLayout());
+		
+		
 
         //Setting Look and Feel
 
        try{
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+           UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
         }
         catch(Exception exception)
         {
-
+			JOptionPane.showMessageDialog(null,exception.toString());
         }
        
        
@@ -43,7 +48,7 @@ public class Login extends JFrame
 
 
 
-        add(label,BorderLayout.PAGE_START);
+        getContentPane().add(label,BorderLayout.PAGE_START);
 
 
 
