@@ -1,4 +1,4 @@
-public class Rectangle implements DimensionInterface
+public class Rectangle
 {
 	private int x;
 	private int y;

@@ -2,6 +2,7 @@ import java.sql.*;
 
 public class jbdc
 {
+	public ArrayList mylist = new ArrayList();
 
  static final String DB_URL = "jdbc:mysql://johnny.heliohost.org/trialnly_rms";
               static final String USER = "trialnly";

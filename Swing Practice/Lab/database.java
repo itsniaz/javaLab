@@ -1,12 +1,13 @@
 import java.sql.*;
-
-public class database
+import java.util.ArrayList;
+public class database 
 {
 
+	
  static final String DB_URL = "jdbc:mysql://localhost/demo";
              
             
-    public static void main(String[] args) 
+    public void db () 
     {
         
         try
@@ -22,29 +23,46 @@ public class database
 
              ResultSet rs = stmt.executeQuery(sql);
 
+			int x;
+			int y;
+			int w;
+			int h;
+			 ArrayList  mylist =  new ArrayList ();
              while(rs.next()){
-         //Retrieve by column name
-         int  x = rs.getInt("x");
-          int  y = rs.getInt("y");
-		   int  w = rs.getInt("w");
-		    int  h = rs.getInt("h");
 
-         //Display values
+           x = rs.getInt("x");
+           y = rs.getInt("y");
+		   w = rs.getInt("w");
+		   h = rs.getInt("h");
+
+		  
+      
          System.out.println("X : " + h);
          System.out.println("y : " + y);
          System.out.println("w : " + w);
          System.out.println("h: " + h+"\n\n");
-		 
-      }
-
-
-        
-        }
-        catch(Exception e)
-        {
-           // System.out.println("I came here babe");
-        }
+		mylist.add(new Rectangle(x,y,w,h));
+		
+		MyFrame mf = new MyFrame();
+		mf.setShapes(mylist);
+		mf.setVisible(true);
 
     }
+	
+		}
+	catch (Exception e)
+	{
+		
+		
+	}
+		}
+
+	
+	public static void main(String[] args)
+	{
+		database mydb = new database();
+		mydb.db();
+		
+	}
 
 }
