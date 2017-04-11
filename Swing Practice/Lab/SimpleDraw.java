@@ -17,10 +17,9 @@ class MyFrame extends JFrame{
 	public void paint(Graphics g){
 		  for(int i = 0; i<list.size();i++)
 		  {
-			  Rectangle r = new Rectangle(0,0,0,0);
-			 //System.out.println(list.get(i));
+			  Rectangle r = (Rectangle)list.get(i);
 			 
-		 g.drawRect(r.getX(),r.getY(),r.getWidth(),r.getHeight());
+		  g.drawRect(r.getX(),r.getY(),r.getWidth(),r.getHeight());
 			  //System.out.println(r[i].toString());
 		  }
 	}
