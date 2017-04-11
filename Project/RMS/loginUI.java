@@ -1,20 +1,28 @@
 import javax.swing.*;
 
+
+
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 
 import java.awt.*;
 import java.awt.event.*;
 
-public class loginUI extends JFrame 
+
+public class loginUI extends JFrame implements ActionListener
 {
+    //Buttons
+
+    public static JButton btnLogin;
+    public static JButton btnRegister;
+    
     //Username
     private JLabel lusername = new JLabel("Username");
-    private JTextField username = new JTextField(10);
+    public JTextField username = new JTextField(10);
 
     //Password
     private JLabel lpassword = new JLabel("Password");
-    private JPasswordField password = new JPasswordField(10);
+    public static JPasswordField password = new JPasswordField(10);
 
     //Header
     private JLabel rms = new JLabel("<html>Railway<br>Management<br>System</html>");
@@ -38,8 +46,30 @@ public class loginUI extends JFrame
     JPanel up = new JPanel(null);
 
     JPanel title = new JPanel(null);
+
+
+    //actionLister logics
+
+    @Override 
+    public void actionPerformed(ActionEvent ev)
+    {
+      if(ev.getSource()== btnLogin)
+      {
+        String pass = new String(password.getPassword());
+        String uid = username.getText();
+
+        if(mysqlConn.validate(uid, pass))
+        {
+          JOptionPane.showMessageDialog(null, "Credentials are Correct");
+        }
+        else
+        {
+          JOptionPane.showMessageDialog(null, "Username/Password Incorrect");
+        }
+      }
+    }
   
-    public loginUI()
+    public void run()
     {
       
       try
@@ -88,9 +118,13 @@ public class loginUI extends JFrame
 
 
       //login JButton
-     JButton btnLogin = new JButton("Login");
-     JButton btnRegister = new JButton("Register");
-      
+      btnLogin = new JButton("Login");
+      btnRegister = new JButton("Register");
+
+      btnLogin.addActionListener(this);
+      btnRegister.addActionListener(this);
+
+
       btnLogin.setFont(new Font("sansserif",Font.ITALIC,18));
       btnLogin.setBounds(140,285,130,30);
 
@@ -139,7 +173,8 @@ public class loginUI extends JFrame
 
     public static void main(String[] args)
     {
-        new loginUI();
+        loginUI a = new loginUI();
+        a.run();
     }
 
 }
