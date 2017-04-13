@@ -13,6 +13,8 @@ public class loginUI extends JFrame implements ActionListener
 {
    public mysqlConn con = new mysqlConn();
    public regUI uir = new regUI(this);
+
+   private JLabel faceicon = new JLabel();
     //Buttons
 
     private JButton btnLogin;
@@ -120,6 +122,10 @@ public class loginUI extends JFrame implements ActionListener
       lpassword.setForeground(new Color(255,255,255));   
       lpassword.setFont(upFont);
       lpassword.setBounds(25,245,85,15);
+
+      faceicon.setBounds(105, 0, 190 ,250);
+      faceicon.setIcon(new ImageIcon("rsc/face.png"));
+      up.add(faceicon);
 
 
       //Seperators
