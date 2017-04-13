@@ -180,6 +180,7 @@ public class loginUI extends JFrame implements ActionListener
       add(title);
       setSize(750,498);
       setResizable(false);
+      setLocationRelativeTo(null);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //setVisible(true);
 

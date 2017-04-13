@@ -121,6 +121,7 @@ public class regUI extends JFrame implements ActionListener{
         setSize(690,500);
 // setVisible(true);
         setResizable(false);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
   @Override
