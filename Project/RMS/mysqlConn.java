@@ -41,11 +41,6 @@ public class mysqlConn
         }
         try
         {
-            Class.forName("com.mysql.jdbc.Driver"); 
-          //  System.out.println("Driver Loaded");
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
-           // System.out.println("Succesful");
-           
             sql = "SELECT password FROM user where username = "  + "'"+ tempUsername+ "'";
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
@@ -107,9 +102,40 @@ public class mysqlConn
       
             }
             return false;
-         }
+         }    
+    }
 
-            
+    public void setProfileInfo(userUI aUserUI,String uname)
+    {
+         sql = "select * from user where username = '"+uname+"'";
+         String username = "";
+         String password = "";
+         String mobileNo = "" ;
+         String name = "";
+         try
+         {
+             stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+
+        while(rs.next()){
+                
+              name = rs.getString("name");
+              mobileNo = rs.getString("mobileNo");
+              username = rs.getString("username");
+              password = rs.getString("password");
+             }
+
+
+            aUserUI.nameField.setText(name);
+            aUserUI.mNoField.setText(mobileNo);
+            aUserUI.usernameField.setText(username);
+            aUserUI.passwordField.setText(password);
+         }
+        catch(Exception e)
+        {
+            //System.out.println(e);
+        }
+
     }
 
 }

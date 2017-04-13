@@ -79,7 +79,7 @@ public class regUI extends JFrame implements ActionListener{
         lMobileNo.setBounds(100, 170, 100, 25);
         lUsername.setBounds(100, 250, 100, 16);
         lPassword.setBounds(100, 320, 80, 16);
-        faceicon.setBounds(105, 15, 195, 155);
+       
 
         
 
@@ -95,7 +95,6 @@ public class regUI extends JFrame implements ActionListener{
         btnBack.setBounds(20,15, 60, 50);
 
         Icon back = new ImageIcon(getClass().getResource("rsc/back.png"));
-       // ImageIcon icon = createImageIcon("rsc/back.png","");
        btnBack.setBorder(BorderFactory.createEmptyBorder());
 
         btnBack.setIcon(back);
@@ -163,11 +162,10 @@ public class regUI extends JFrame implements ActionListener{
           
        }
     }
-   public static void main(String[] args) {
+   /*public static void main(String[] args) {
         regUI uid = new regUI();
         uid.buildregUI();
         uid.setVisible(true);
        
-    }
-  
+   }*/
 }

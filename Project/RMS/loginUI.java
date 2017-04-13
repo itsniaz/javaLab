@@ -9,10 +9,12 @@ import java.awt.*;
 import java.awt.event.*;
 
 
+
 public class loginUI extends JFrame implements ActionListener
 {
-   public mysqlConn con = new mysqlConn();
-   public regUI uir = new regUI(this);
+   private mysqlConn con = new mysqlConn();
+   private regUI uir = new regUI(this);
+   private userUI userPanel ;
 
    private JLabel faceicon = new JLabel();
     //Buttons
@@ -22,7 +24,7 @@ public class loginUI extends JFrame implements ActionListener
     
     //Username
     private JLabel lusername = new JLabel("Username");
-    public JTextField username = new JTextField(10);
+    private JTextField username = new JTextField(10);
 
     //Password
     private JLabel lpassword = new JLabel("Password");
@@ -69,7 +71,11 @@ public class loginUI extends JFrame implements ActionListener
     
         else if(con.validate(uid, pass))
         {
-          JOptionPane.showMessageDialog(null, "Credentials are Correct");
+          
+            userPanel = new userUI(this);
+            userPanel.run(username.getText());
+            this.setVisible(false);
+
         }
         else
         {
