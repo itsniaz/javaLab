@@ -174,7 +174,7 @@ public class loginUI extends JFrame implements ActionListener
 
       add(up);
       add(title);
-      setSize(761,509);
+      setSize(750,498);
       setResizable(false);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //setVisible(true);
