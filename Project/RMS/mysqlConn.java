@@ -98,8 +98,16 @@ public class mysqlConn
 
          catch (Exception e)
          {
-             System.out.println(e);
-             return false;
+             if (e instanceof SQLIntegrityConstraintViolationException) 
+             {
+                 JOptionPane.showMessageDialog(null, "Username already taken !", "Sign Up Error", JOptionPane.ERROR_MESSAGE);
+                 
+             } 
+             else
+            {
+      
+            }
+            return false;
          }
 
             

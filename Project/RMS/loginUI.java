@@ -12,7 +12,7 @@ import java.awt.event.*;
 public class loginUI extends JFrame implements ActionListener
 {
    public mysqlConn con = new mysqlConn();
-   //public regUI ui = new regUI();
+   public regUI uir = new regUI(this);
     //Buttons
 
     private JButton btnLogin;
@@ -72,12 +72,10 @@ public class loginUI extends JFrame implements ActionListener
       }
       else if(ev.getSource() == btnRegister)
       {
-      // System.out.println(this);
-        regUI aui = new regUI(this);
 
          setVisible(false);
-         aui.buildregUI();
-         aui.setVisible(true);
+         uir.buildregUI();
+         uir.setVisible(true);
       }
     }
   
