@@ -140,7 +140,7 @@ public class regUI extends JFrame implements ActionListener{
           String pass = new String(tPassword.getPassword());
           if(tName.getText() .equals("") || tMobileNo.getText().equals("") || tUname.getText().equals("") || pass == "")
           {
-            JOptionPane.showMessageDialog(null, "<html>Registrtion failed !<br> One or more field is empty !<html>","Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "<html>Registrtion failed !<br> One or more fields are empty !<html>","Error",JOptionPane.ERROR_MESSAGE);
           }
           else 
           {

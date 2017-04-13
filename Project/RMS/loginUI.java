@@ -59,9 +59,13 @@ public class loginUI extends JFrame implements ActionListener
       {
         String pass = new String(password.getPassword());
         String uid = username.getText();
-
+     
+        if(pass.equals("") || uid.equals("") )
+        {
+          JOptionPane.showMessageDialog(null, "Username/Password field empty !", "Login failed", JOptionPane.ERROR_MESSAGE);
+        }
     
-        if(con.validate(uid, pass))
+        else if(con.validate(uid, pass))
         {
           JOptionPane.showMessageDialog(null, "Credentials are Correct");
         }
