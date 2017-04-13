@@ -138,4 +138,25 @@ public class mysqlConn
 
     }
 
+    public void updateProfile(userUI aUserUI,String previousUsername)
+    {
+        previousUsername = "'"+previousUsername+"'";
+        String name = "'"+aUserUI.nameField.getText()+"'";
+        String mNo  = "'"+aUserUI.mNoField.getText()+"'";
+        String username = "'"+aUserUI.usernameField.getText()+"'";
+        String password = "'"+aUserUI.passwordField.getText()+"'";
+        sql = "update user set name = "+name+", mobileNo = "+mNo+", username = "+username+", password = "+password+" where username = "+previousUsername;
+        try
+        {
+            stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null,"Profile Updated","Success",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Couldn't update profile","Failed !",JOptionPane.ERROR_MESSAGE);            
+            //System.out.println(e);
+        }
+    }
+
 }

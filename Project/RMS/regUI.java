@@ -31,6 +31,7 @@ public class regUI extends JFrame implements ActionListener{
     private JTextField   tMobileNo = new JTextField();
     private JButton     btnSubmit = new JButton("Submit");
     private JButton     btnBack   = new JButton();
+    private JTextField allFields[] = {tName,tUname,tMobileNo};
     Font lFont = new Font("sansserif", Font.PLAIN, 14);
     Font tFont = new Font("Andalus", Font.PLAIN, 26);
     public loginUI test;
@@ -152,6 +153,12 @@ public class regUI extends JFrame implements ActionListener{
               JOptionPane.showMessageDialog(null, "Registration Successful");
               test.setVisible(true);
               setVisible(false);
+
+              for(int i = 0 ; i<allFields.length;i++)
+              {
+                allFields[i].setText("");
+              }
+              tPassword.setText("");
             }
             else
             {

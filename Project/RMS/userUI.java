@@ -182,7 +182,7 @@ public class userUI extends JFrame  implements ActionListener
       }
       else if(e.getSource() == btnUpdate )
       {
-        connection.updateProfile()
+        connection.updateProfile(this,usernameField.getText());
       }
     
     }
