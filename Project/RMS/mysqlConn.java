@@ -99,8 +99,8 @@ public class mysqlConn
          {
              if (e instanceof SQLIntegrityConstraintViolationException) 
              {
-                 JOptionPane.showMessageDialog(null, "Username already taken !", "Sign Up Error", JOptionPane.ERROR_MESSAGE);
-                 
+                JOptionPane.showMessageDialog(null, "Username already taken !", "Sign Up Error", JOptionPane.ERROR_MESSAGE);
+                
              } 
              else
             {

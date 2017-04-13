@@ -25,7 +25,6 @@ public class regUI extends JFrame implements ActionListener{
     private JLabel lPassword  = new JLabel("Password :");
     private JLabel lMobileNo  = new JLabel("Mobile no :");
     private JLabel lName      = new JLabel("Name :");
-    private JLabel faceicon   = new JLabel();
     private JTextField tName = new JTextField();
     private JTextField tUname = new JTextField();
     private JPasswordField tPassword = new JPasswordField();
@@ -82,7 +81,7 @@ public class regUI extends JFrame implements ActionListener{
         lPassword.setBounds(100, 320, 80, 16);
         faceicon.setBounds(105, 15, 195, 155);
 
-        faceicon.setIcon(new ImageIcon("rsc/face.png"));
+        
 
         //Setting the locations of text and passwordfield
 
