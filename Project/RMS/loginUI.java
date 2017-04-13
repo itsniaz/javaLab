@@ -123,8 +123,8 @@ public class loginUI extends JFrame implements ActionListener
       lpassword.setFont(upFont);
       lpassword.setBounds(25,245,85,15);
 
-      faceicon.setBounds(105, 0, 190 ,250);
-      faceicon.setIcon(new ImageIcon("rsc/face.png"));
+      faceicon.setBounds(138, 50, 120 ,120);
+      faceicon.setIcon(new ImageIcon("rsc/facesmall.png"));
       up.add(faceicon);
 
 
