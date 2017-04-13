@@ -1,2 +1,2 @@
-javac loginUI.java
-java loginUI
+javac main.java
+java main

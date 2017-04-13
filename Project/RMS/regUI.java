@@ -120,6 +120,7 @@ public class regUI extends JFrame implements ActionListener{
          //setAlwaysOnTop(true);
         setSize(690,500);
 // setVisible(true);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
   @Override
@@ -128,7 +129,7 @@ public class regUI extends JFrame implements ActionListener{
      if(event.getSource() == btnBack)
         {
          //System.out.println(setVisible(false))
-          System.out.println("button pressed");
+      
         
           setVisible(false);         
           test.setVisible(true);
