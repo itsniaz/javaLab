@@ -11,10 +11,12 @@ import java.awt.event.*;
 
 public class loginUI extends JFrame implements ActionListener
 {
+   public mysqlConn con = new mysqlConn();
+   //public regUI ui = new regUI();
     //Buttons
 
-    public static JButton btnLogin;
-    public static JButton btnRegister;
+    private JButton btnLogin;
+    private  JButton btnRegister;
     
     //Username
     private JLabel lusername = new JLabel("Username");
@@ -58,7 +60,8 @@ public class loginUI extends JFrame implements ActionListener
         String pass = new String(password.getPassword());
         String uid = username.getText();
 
-        if(mysqlConn.validate(uid, pass))
+    
+        if(con.validate(uid, pass))
         {
           JOptionPane.showMessageDialog(null, "Credentials are Correct");
         }
@@ -66,6 +69,15 @@ public class loginUI extends JFrame implements ActionListener
         {
           JOptionPane.showMessageDialog(null, "Username/Password Incorrect");
         }
+      }
+      else if(ev.getSource() == btnRegister)
+      {
+      // System.out.println(this);
+        regUI aui = new regUI(this);
+
+         setVisible(false);
+         aui.buildregUI();
+         aui.setVisible(true);
       }
     }
   
@@ -166,7 +178,7 @@ public class loginUI extends JFrame implements ActionListener
       add(title);
       setSize(761,509);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setVisible(true);
+      //setVisible(true);
 
       
     }
@@ -175,6 +187,7 @@ public class loginUI extends JFrame implements ActionListener
     {
         loginUI a = new loginUI();
         a.run();
+        a.setVisible(true);
     }
 
 }
