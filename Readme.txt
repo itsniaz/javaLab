@@ -1,1 +1,0 @@
-Lab Tasks of OOP1
